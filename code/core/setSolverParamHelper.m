@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a53da538e992d87aba7b6f8b9e4cbe6d0bef1a9999db16dfa0325f27bdba6a4
-size 788
+function [mipTolInt, scalPar, feasTol, emphPar] = setSolverParamHelper(SolverParameters)
+
+
+if strcmp(SolverParameters,'CplexDefault')
+    mipTolInt = 1e-5;
+    scalPar = 0;
+    feasTol = 1e-6;
+    emphPar = 0;
+elseif strcmp(SolverParameters,'LCSBDefault')
+    % Empty will also just fetch the LCSB default
+    mipTolInt = 1e-9;
+    scalPar = -1;
+    feasTol = 1e-9;
+    emphPar = 1;
+elseif strcmp(SolverParameters,'LCSBScaling')
+    mipTolInt = 1e-9;
+    scalPar = 0;
+    feasTol = 1e-9;
+    emphPar = 1;
+elseif strcmp(SolverParameters,'redGEM_m7')
+    mipTolInt = 1e-7;
+    scalPar = -1;
+    feasTol = 1e-7;
+    emphPar = 1;
+elseif strcmp(SolverParameters,'redGEM_m8')
+    mipTolInt = 1e-8;
+    scalPar = -1;
+    feasTol = 1e-8;
+    emphPar = 1;
+else
+    error('Wrong option!')
+end
+
+
+end

@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51e5705fdbc8ddba57c3053bac2d3071066b0cb4eeb290c03ba98656a429b2d4
-size 287
+function DM_sink_rxns = DM_sink_rxnsANALYSIS(model)
+
+exchgRxns = extract_drains(model);
+DM_sink_rxns=[];
+for i=1:length(exchgRxns)
+    if ~isempty(strfind(exchgRxns{i},'DM')) || ~isempty(strfind(exchgRxns{i},'sink'))
+        DM_sink_rxns=[DM_sink_rxns,exchgRxns(i)];
+    end
+    
+end
+end

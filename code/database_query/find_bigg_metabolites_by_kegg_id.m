@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e451fed6585c3c2ee5b22c10f509fb1742c023e4d7fba79d2a0a7180207028fd
-size 776
+function [bigg_metabolites] = find_bigg_metabolites_by_kegg_id(kegg_id, bigg_metabolites_file)
+    % Read the BiGG metabolites file
+    bigg_data = readtable(bigg_metabolites_file, 'Delimiter', '\t', 'ReadVariableNames', true);
+
+    % Initialize the list of BiGG metabolites
+    bigg_metabolites = {};
+
+    % Iterate through the rows and extract the BiGG metabolite IDs
+    for i = 1:height(bigg_data)
+        database_links = bigg_data{i, 'database_links'}{1};
+
+        kegg_pattern = strcat('KEGG Compound: http://identifiers.org/kegg.compound/', kegg_id);
+
+        if contains(database_links, kegg_pattern)
+            bigg_metabolite_id = bigg_data{i, 'universal_bigg_id'}{1};
+            bigg_metabolites = [bigg_metabolites; bigg_metabolite_id];
+        end
+    end
+end
