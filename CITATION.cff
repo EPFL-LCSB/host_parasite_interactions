@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software archive (Zenodo DOI below) and the associated paper (preferred-citation)."
+title: "host_parasite_interactions: genome-scale metabolic modelling of host–parasite (malaria) interactions"
+type: software
+version: v1.0.0
+date-released: 2023-10-23
+license: Apache-2.0
+repository-code: "https://github.com/EPFL-LCSB/host_parasite_interactions"
+url: "https://github.com/EPFL-LCSB/host_parasite_interactions"
+abstract: >-
+  MATLAB pipeline (using matTFA, redGEM/redHUMAN and CPLEX) to reconstruct
+  context-specific genome-scale metabolic models of the human hepatocyte and of
+  Plasmodium falciparum, build an integrated host–parasite model, and perform
+  host gene-essentiality analysis for parasite survival. Companion code for
+  Maurizio, Masid et al., Nat Commun 2024.
+keywords:
+  - genome-scale metabolic modelling
+  - host-parasite interactions
+  - Plasmodium falciparum
+  - malaria
+  - hepatocyte
+  - thermodynamics-based flux analysis
+  - gene essentiality
+  - Recon3D
+# Authors of the SOFTWARE (not the full paper author list): the people who
+# contributed to the code. The complete 14-author paper credit is preserved in
+# preferred-citation below and via the linked article DOI.
+authors:
+  - family-names: Joly
+    given-names: Denis
+    affiliation: "Laboratory of Computational Systems Biotechnology (LCSB), EPFL"
+    orcid: "https://orcid.org/0000-0003-1954-9637"
+  - family-names: Masid
+    given-names: Maria
+    orcid: "https://orcid.org/0000-0001-6470-5083"
+    affiliation: "University of Lausanne (UNIL)"   # EPFL-LCSB at the time of the work
+  - family-names: Hatzimanikatis
+    given-names: Vassily
+    orcid: "https://orcid.org/0000-0001-6432-4694"
+    affiliation: "Laboratory of Computational Systems Biotechnology (LCSB), EPFL"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20543332"
+    description: "Concept DOI (all versions) of the software archive on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.20543333"
+    description: "DOI of version v1.0.0"
+preferred-citation:
+  type: article
+  title: "Host cell CRISPR genomics and modelling reveal shared metabolic vulnerabilities in the intracellular development of Plasmodium falciparum and related hemoparasites"
+  journal: "Nature Communications"
+  year: 2024
+  volume: 15
+  issue: 1
+  start: 6145          # article number — please confirm (6145 per PubMed Central)
+  doi: "10.1038/s41467-024-50405-x"
+  authors:
+    - family-names: Maurizio
+      given-names: Marina
+    - family-names: Masid
+      given-names: Maria
+    - family-names: Woods
+      given-names: Kerry
+    - family-names: Caldelari
+      given-names: Reto
+    - family-names: Doench
+      given-names: "John G."
+    - family-names: Naguleswaran
+      given-names: Arunasalam
+    - family-names: Joly
+      given-names: Denis
+    - family-names: González-Fernández
+      given-names: Martín
+    - family-names: Zemp
+      given-names: Jonas
+    - family-names: Borteele
+      given-names: Mélanie
+    - family-names: Hatzimanikatis
+      given-names: Vassily
+    - family-names: Heussler
+      given-names: Volker
+    - family-names: Rottenberg
+      given-names: Sven
+    - family-names: Olias
+      given-names: Philipp
